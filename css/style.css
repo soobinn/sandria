@@ -482,7 +482,7 @@ z-index: 1;
 
 }
 .content3>div:nth-child(1){
-    background-image:url("./imgs/content3.png");
+    background-image:url("https://soobinn.github.io/sandria/imgs/content3.png");
     width: 100%;
     transition: 0.5s;
     height: 100%;
