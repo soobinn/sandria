@@ -197,6 +197,11 @@
 
     }
 
+    .main_menu{
+
+        width: 100%;
+        justify-content: space-around;
+    }
     li.main_menu_list>a {
         width: 95px;
         font-size: 0.8em;
