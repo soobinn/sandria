@@ -225,7 +225,7 @@
     .content2_h2 {
         font-size: 0.5em;
         line-height: 20px;
-        padding: 10%;
+        padding: 10% 8% !important;
     }
 
     .content2_p {
