@@ -129,7 +129,9 @@
 
         margin-top: 50px;
     }
-
+    .content4_box_text p {
+        font-size: 0.8rem;
+    }
     .content4_box {
         height: 80%;
     }
@@ -173,6 +175,10 @@
     .content5_event_text h3 {
         font-size: 0.8em;
 
+    }
+
+    .footer_text1>div:nth-child(1){
+        width: 35%;
     }
 }
 
