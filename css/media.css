@@ -129,9 +129,11 @@
 
         margin-top: 50px;
     }
+
     .content4_box_text p {
         font-size: 0.8rem;
     }
+
     .content4_box {
         height: 80%;
     }
@@ -177,7 +179,7 @@
 
     }
 
-    .footer_text1>div:nth-child(1){
+    .footer_text1>div:nth-child(1) {
         width: 35%;
     }
 }
@@ -197,11 +199,12 @@
 
     }
 
-    .main_menu{
+    .main_menu {
 
         width: 100%;
         justify-content: space-around;
     }
+
     li.main_menu_list>a {
         width: 95px;
         font-size: 0.8em;
@@ -364,9 +367,12 @@
         width: 75px;
         font-size: 0.7em;
     }
-    .main, .main_slide {
+
+    .main,
+    .main_slide {
         height: 350px;
     }
+
     .main {
         margin-top: 80px;
     }
