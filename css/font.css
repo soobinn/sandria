@@ -1,0 +1,39 @@
+@font-face {
+  font-family: 'TheJamsil5Thin';
+  src: url(/font/The\ Jamsil\ 1\ Thin.ttf);
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'TheJamsil5Light';
+  src: url(/font/The\ Jamsil\ 2\ Light.ttf);
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'TheJamsil5Regulard';
+  src: url(/font/The\ Jamsil\ 3\ Regular.ttf);
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'TheJamsil5Bold';
+  src: url(/font/The\ Jamsil\ 5\ Bold.ttf);
+  font-weight: 700;
+  font-style: normal;
+}
+/* 제일얇음 */
+
+/* 얇음 */
+
+.sub_menu,.text2,.content3_text1:nth-child(2),.content4_box_text p,footer,.content3_text_btn,.content4_box_btn,.content2_p{
+  font-family: 'TheJamsil5Light';
+}
+/* 중간 */
+li.main_menu_list,.content3_text_btn,.content5_event_text,select,.login_box p{
+  font-family: 'TheJamsil5Regulard';
+}
+/* 굵음 */
+.text1,.content3_text1:nth-child(1),.content4_box_text h1,.content5_box_text,.content2_h2{
+  font-family: 'TheJamsil5Regulard';
+}
