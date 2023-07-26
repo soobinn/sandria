@@ -34,7 +34,7 @@
     }
 
     .content4_box {
-        height: 90%;
+        height: 80%;
     }
 
     .content4_box_text>h1:nth-child(1),
@@ -213,7 +213,7 @@
 
     li.sub_menu_list>a {
         width: 95px;
-
+        font-size: 1em;
     }
 
     .content {
@@ -289,7 +289,7 @@
     }
 
     .content4_box {
-        height: 75%;
+        height: 65%;
     }
 
     .content4_box_slide {

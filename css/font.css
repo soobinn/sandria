@@ -1,33 +1,16 @@
 @font-face {
-  font-family: 'TheJamsil5Thin';
-  src: url(/font/The\ Jamsil\ 1\ Thin.ttf);
-  font-weight: 700;
+  font-family: 'GmarketSansMedium';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+  font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'TheJamsil5Light';
-  src: url(/font/The\ Jamsil\ 2\ Light.ttf);
-  font-weight: 700;
+  font-family: 'SUITE-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/SUITE-Regular.woff2') format('woff2');
+  font-weight: 400;
   font-style: normal;
 }
-
-@font-face {
-  font-family: 'TheJamsil5Regulard';
-  src: url(/font/The\ Jamsil\ 3\ Regular.ttf);
-  font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'TheJamsil5Bold';
-  src: url(/font/The\ Jamsil\ 5\ Bold.ttf);
-  font-weight: 700;
-  font-style: normal;
-}
-
-
-/* 얇음 */
 
 .sub_menu,
 .text2,
@@ -37,23 +20,18 @@ footer,
 .content3_text_btn,
 .content4_box_btn,
 .content2_p {
-  font-family: 'TheJamsil5Light';
+  font-family: 'SUITE-Regular';
+
 }
 
-/* 중간 */
 li.main_menu_list,
 .content3_text_btn,
 .content5_event_text,
 select,
-.login_box p {
-  font-family: 'TheJamsil5Regulard';
-}
-
-/* 굵음 */
-.text1,
+.login_box p .text1,
 .content3_text1:nth-child(1),
 .content4_box_text h1,
 .content5_box_text,
 .content2_h2 {
-  font-family: 'TheJamsil5Regulard';
+  font-family: 'GmarketSansMedium';
 }
