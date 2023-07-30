@@ -1,0 +1,897 @@
+@import 'scss';
+
+
+* {
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    color: inherit;
+    display: block;
+}
+
+.wrapper {
+    max-width: 1920px;
+    margin: 0px auto;
+}
+
+/* 메뉴 */
+header {
+    @include size(100%, 80px) {}
+
+    ;
+
+    @include postion($p: fixed, $t: 3%, $l: 0) {
+        z-index: 5;
+        margin: 0px auto;
+        transition: 0.5s;
+    }
+
+    ;
+}
+
+.down {
+    @include postion($p: fixed, $t: 0%) {
+        color: white;
+        transition: 0.5s;
+        background-color: #373737;
+    }
+}
+
+.up {
+    @include size(100px, 100px) {
+        @include postion($p: fixed, $b: 5%, $r: 2%) {
+
+            z-index: 3;
+            animation-name: updown;
+            animation-duration: 1.2s;
+            animation-iteration-count: infinite;
+        }
+
+    }
+
+    ;
+
+}
+
+.login_box {
+    @include postion($p: fixed, $b: 15%, $r: 2%) {
+
+        width: 110px;
+        z-index: 3;
+    }
+}
+
+.login,
+.sign {
+    @include size(90px, 90px) {
+        @include postion($p: relative) {
+
+            z-index: 1;
+            border-radius: 50%;
+            position: relative;
+            margin: 0px auto;
+            opacity: 0;
+            text-align: center;
+        }
+    }
+
+    ;
+
+    img {
+        @include postion($p: absolute, $t: 5px, $l: 50%) {
+            z-index: 1;
+            transform: translate(-50%, 0%);
+        }
+    }
+
+    p {
+
+        @include postion($p: absolute, $t: 78%, $l: 50%) {
+            z-index: 1;
+            transform: translate(-50%, -50%);
+        }
+
+    }
+
+    &.hover {
+        color: white;
+    }
+
+}
+
+.opacity {
+    transition: 0.3s;
+    opacity: 1;
+}
+
+.login_bg,
+.sign_bg {
+    @include size(100%, 100%) {
+        @include postion($p: absolute, $t: 0, $l: 0) {
+            background: $main-color;
+            border-radius: 50%;
+            transform: scale(0);
+            transition: 0.5s;
+        }
+    }
+
+    ;
+}
+
+
+.login:hover .login_bg,
+.sign:hover .sign_bg {
+    transform: scale(1);
+    transition: 0.5s;
+}
+
+.sign {
+    margin-top: 10px;
+}
+
+.up img {
+    @include size(100%, 100%) {}
+
+    ;
+
+}
+
+
+@keyframes updown {
+    0% {
+        bottom: 1%;
+    }
+
+    50% {
+        bottom: 3%;
+    }
+
+    100% {
+        bottom: 1%;
+    }
+}
+
+.header_wrapper {
+    @include center(space-between) {
+
+        position: relative;
+        max-width: 1170px;
+        margin: 0px auto;
+        height: 100%;
+        background: white;
+    }
+
+    ;
+}
+
+.down2 {
+    background: #373737;
+}
+
+.bg {
+
+    @include size(100%, 300px) {
+        @include postion($p: absolute, $t: 80px, $l: 0) {
+
+            display: none;
+            background: rgba(253, 253, 253, 0.81);
+        }
+
+    }
+
+}
+
+.down3 {
+    background: rgba(82, 81, 81, 0.81);
+}
+
+.logo {
+    @include center(center) {
+        @include size(200px, 100%) {
+
+            padding: 0 1%;
+        }
+    }
+
+    ;
+}
+
+.logo>img {
+    @include size(100%, 60%) {}
+
+    ;
+
+}
+
+nav {
+    width: 65%;
+}
+
+.main_menu {
+    @include center(center) {
+
+
+        width: 100%;
+    }
+
+    ;
+}
+
+li.main_menu_list>a {
+
+    @include size(145px, 80px) {
+        position: relative;
+        line-height: 80px;
+        text-align: center;
+    }
+
+    ;
+}
+
+li.main_menu_list>a::before,
+li.main_menu_list>a::after {
+    @include size(0%, 5px) {
+        content: "";
+        position: absolute;
+        background-color: $main-color;
+        right: 50%;
+        bottom: 0;
+    }
+
+    ;
+}
+
+.main_menu_list:hover.main_menu_list>a::before {
+    width: 50%;
+    transition: 0.3s;
+}
+
+li.main_menu_list>a::after {
+    @include size(0%, 5px) {
+        @include postion($p: absolute, $l: 50%) {
+
+
+            content: "";
+            background-color: $main-color;
+        }
+    }
+
+    ;
+}
+
+.main_menu_list:hover.main_menu_list>a::after {
+    width: 50%;
+    transition: 0.3s;
+}
+
+.sub_menu {
+    height: 300px;
+    position: absolute;
+    display: none;
+    padding-top: 20px;
+    font-size: 0.8rem;
+}
+
+li.sub_menu_list>a {
+    @include size(145px, 30px) {
+        line-height: 30px;
+        text-align: center;
+        font-size: 1.2em;
+
+    }
+
+    ;
+}
+
+li.sub_menu_list>a:hover {
+    background-color: $main-color;
+    color: white;
+}
+
+/* 슬라이드 */
+.main {
+    @include size(100%, 650px) {
+        position: relative;
+        overflow: hidden;
+    }
+
+    ;
+}
+
+.main_slide_wrapper,
+.main_slide_list img {
+    @include size(100%, 100%) {}
+
+    ;
+}
+
+.main_slide_list {
+    transition: 0.5s ease-out;
+}
+
+.main_slide.animate {
+    transition: 0.5s ease-out;
+}
+
+.main_slide {
+    @include size(500%, 650px) {
+        position: absolute;
+        display: flex;
+    }
+
+    ;
+}
+
+.main_slide_list>a {
+    @include size(100%, 100%) {}
+
+    ;
+}
+
+.slide_page_box {
+    @include size(100%, 100px) {
+        position: absolute;
+        z-index: 1;
+        top: 50%;
+        transform: translate(0px, -50%);
+    }
+
+    ;
+}
+
+.slide_page {
+    @include center(space-between) {
+
+        width: 90%;
+        height: 100%;
+        margin: 0px auto;
+        text-align: center;
+
+    }
+
+    ;
+}
+
+.slide_btn {
+    @include size(50px, 50px) {
+
+        display: block;
+        cursor: pointer;
+
+    }
+
+    ;
+}
+
+.slide_btn img,
+.slide_toggle img {
+    @include size(100%, 100%) {}
+
+    ;
+}
+
+.slide_toggle_box {
+    @include center(right) {
+        @include size(88%, 50px) {
+            @include postion($p: absolute, $t: 59%, $l: 50%) {
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+
+    ;
+
+}
+
+.slide_toggle {
+    @include size(20px, 20px) {
+        text-align: center;
+    }
+
+    ;
+}
+
+/* .content */
+.content,
+.content2 {
+    @include center(space-around) {
+
+        margin: 0px auto;
+        max-width: 1400px;
+        height: 600px
+    }
+
+    ;
+}
+
+.content2 {
+    height: 500px;
+    margin-top: 50px;
+}
+
+.content_box {
+    @include size(47%, 85%) {
+        margin: 0px auto;
+    }
+
+    ;
+}
+
+.content_box>a,
+.content2_box>a {
+    @include size(100%, 100%) {
+        position: relative;
+    }
+
+    ;
+}
+
+.content_box>a::after,
+.content2_box>a::after {
+    content: "";
+
+    @include size(100%, 10px) {
+
+        background-color: $main-color2;
+        bottom: 0;
+        position: absolute;
+    }
+
+    ;
+}
+
+.content_img {
+    @include size(100%, 65%) {
+        background: antiquewhite;
+
+    }
+
+    ;
+}
+
+.content2_img {
+    @include size(100%, 55%) {
+        background: antiquewhite;
+
+    }
+
+    ;
+}
+
+.content_img img,
+.content2_img img {
+    @include size(100%, 100%) {
+        object-fit: cover;
+    }
+
+    ;
+}
+
+.content_text,
+.content2_text {
+
+    @include size(100%, 35%) {
+        position: relative;
+        background-color: #eeecec;
+    }
+
+    ;
+
+}
+
+.content2_text {
+    height: 45%;
+}
+
+.content_text::after,
+.content2_text::after {
+    @include size(0%, 10px) {
+        content: "";
+        position: absolute;
+        left: 50%;
+        background-color: $sub-color;
+        bottom: 0;
+        transition: 0.5s;
+    }
+
+    ;
+}
+
+.content_text::before,
+.content2_text::before {
+    @include size(0%, 10px) {
+        content: "";
+        position: absolute;
+        right: 50%;
+        background-color: $sub-color;
+        bottom: 0;
+        transition: 0.5s;
+    }
+
+    ;
+}
+
+.content_box:hover .content_text::after,
+.content2_box:hover .content2_text::after,
+.content_box:hover .content_text::before,
+.content2_box:hover .content2_text::before {
+    content: "";
+    width: 50%;
+    position: absolute;
+    background-color: $sub-color;
+    z-index: 1;
+}
+
+
+
+.text1 {
+    padding: 5%;
+}
+
+.text2 {
+    @include center(inherit) {
+        padding: 0 5%;
+        position: absolute;
+        bottom: 15%;
+    }
+
+    ;
+}
+
+.xi-plus-square-o {
+    color: rgb(246, 243, 243);
+    font-size: 1.5em;
+}
+
+.content_box:hover .xi-plus-square-o,
+.content2_box:hover .xi-plus-square-o {
+    transition: 0.5s;
+    color: $sub-color;
+    font-size: 1.5em;
+}
+
+.content2_box {
+    @include size(31%, 95%) {
+        background-color: $sub-color;
+    }
+
+    ;
+}
+
+/* .content3 */
+.content3 {
+    @include size(100%, 600px) {
+        position: relative;
+        overflow: hidden;
+        margin-top: 100px;
+    }
+
+    ;
+}
+
+.content3:hover.content3>div:nth-child(1) {
+    transform: scale(1.15);
+    transition: 0.5s;
+}
+
+.content3>div:nth-child(1) {
+
+    @include size(100%, 100%) {
+
+        background-image: url("https://soobinn.github.io/sandria/imgs/content3.png");
+        transition: 0.5s;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    ;
+}
+
+.content3 img {
+    @include size(100%, 100%) {}
+
+    ;
+}
+
+.content3_text {
+    @include size(370px, 100%) {
+        background: rgba(55, 55, 55, 0.9);
+        color: white;
+    }
+
+    ;
+
+    @include postion($p: absolute, $t: 0px, $l: 25%) {
+        transform: translate(-50%, 0px);
+    }
+
+    ;
+}
+
+.content3_text1:nth-child(1) {
+    line-height: 40px;
+    padding: 30% 10% 11% 10%;
+}
+
+.content2_h2 {
+    font-size: 0.89em;
+    line-height: 40px;
+    padding: 20% 10% 11% 10%;
+}
+
+.content2_p,
+.content3_text1:nth-child(2) {
+    font-size: 1em;
+    padding: 0% 8%;
+    line-height: 26px;
+}
+
+.content3_text_btn {
+    cursor: pointer;
+    position: absolute;
+    bottom: 10%;
+    margin: 0 10%;
+    border: 1px solid;
+    padding: 5% 15%;
+}
+
+/* content4 */
+
+.content4 {
+    @include center(inherit) {
+        @include size(100%, 550px) {
+            margin-top: 100px;
+        }
+    }
+
+    ;
+}
+
+
+.content4_box,
+.content5_box {
+
+    @include size(80%, 100%) {
+        display: flex;
+        margin: 0px auto;
+    }
+
+    ;
+}
+
+.content4_box_slide {
+    @include size(70%, 100%) {
+        position: relative;
+    }
+
+    ;
+}
+
+.content4_box_slide a,
+.content4_box_slide img,
+.content5_event_box a,
+.content5_event_img img,
+.insta img {
+    @include size(100%, 100%) {}
+
+    ;
+}
+
+.content4_box_slide a {
+    position: absolute;
+}
+
+.content4_box_text {
+    @include size(30%, 100%) {
+        position: relative;
+        background-color: #eeecec;
+    }
+
+    ;
+}
+
+.content4_box_text>h1:nth-child(1) {
+    padding: 10% 10% 3% 10%;
+}
+
+.content4_box_text>h1:nth-child(2) {
+    padding: 2% 10%;
+}
+
+.content4_box_text p {
+    padding: 5% 10%;
+    line-height: 25px;
+}
+
+.content4_box_btn {
+    cursor: pointer;
+    position: absolute;
+    bottom: 10%;
+    margin-left: 10%;
+    border: 1px solid black;
+    padding: 5% 15%;
+}
+
+/* .content5 */
+.content5 {
+    @include size(100%, 400px) {
+        margin-top: 100px;
+    }
+
+    ;
+
+    .content5_box {
+        display: block;
+    }
+
+}
+
+
+.content5_box_text {
+    height: 30px;
+    padding: 2% 0%;
+    position: relative;
+
+    &::after {
+        @include size(80%, 15px) {
+            @include postion($p: absolute, $t: 50%, $r: 0%) {
+                content: "";
+                background: $main-color2;
+                transform: translate(0%, -50%);
+            }
+        }
+
+        ;
+    }
+
+    h1 {
+        @include postion($p: absolute, $t: 0, $l: 0) {}
+    }
+}
+
+
+.content5_event {
+
+    @include center(space-between) {
+        width: 100%;
+        height: calc(100% - 80px);
+    }
+
+    ;
+}
+
+.content5_event_box {
+    @include size(32%, 90%) {
+        transition: 0.5s;
+    }
+
+    ;
+
+    &:hover {
+        box-shadow: 5px 5px 11px 0px rgb(81, 80, 80);
+        transition: 0.5s;
+        margin-top: -15px;
+    }
+}
+
+.content5_event_img {
+    @include size(100%, 80%) {}
+}
+
+.content5_event_text {
+
+    @include center(space-between) {
+        @include size(100%, 20%) {
+            background-color: $main-color2;
+            color: white;
+        }
+    }
+
+    ;
+
+    h3,
+    i {
+        padding: 5%;
+    }
+
+    h3 {
+        font-size: 1rem;
+    }
+
+    i {
+        font-size: 1.5rem;
+    }
+}
+
+
+/* footer */
+footer {
+    background-color: $main-color2;
+    width: 100%;
+    color: white;
+    margin-top: 50px;
+    font-size: 0.8rem;
+
+
+    .footer_box {
+        max-width: 1170px;
+        height: 100%;
+        margin: 0px auto;
+    }
+
+    .footer_text1 {
+        @include center(space-between) {
+            @include size(100%, 65px) {
+                border-bottom: 1px solid gray;
+            }
+        }
+
+        ;
+    }
+
+    .footer_text1>div:nth-child(1) {
+        @include center(space-between) {
+            width: 40%;
+        }
+    }
+
+    .footer_text1>div:nth-child(2) {
+        width: 20%;
+        text-align: right;
+    }
+
+    .footer_text1>div:nth-child(2)>select {
+        @include size(130px, 30px)
+    }
+
+    .footer_text1>div>a {
+        padding: 5% 2%;
+    }
+
+    .footer_text2 {
+        width: 100%;
+        line-height: 30px;
+        padding: 3% 0% 0% 0%;
+    }
+
+    .footer_text2>div {
+        text-align: center;
+    }
+
+    .footer_box span {
+        position: relative;
+        display: inline-block;
+    }
+
+    .footer_box span::after {
+        @include size(1px, 10px) {
+            @include postion($p: absolute, $t: 50%, $r: -3px) {
+
+                content: "";
+                transform: translate(0px, -50%);
+                background-color: #373737;
+
+            }
+        }
+
+        ;
+    }
+
+    .sns {
+        @include center(center) {
+            @include size(100%, 90px)
+        }
+
+        ;
+    }
+
+    .insta {
+        @include size(40px, 40px)
+    }
+}

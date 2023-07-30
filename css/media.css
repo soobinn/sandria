@@ -502,6 +502,7 @@
     }
 
     .content4_box_text p {
+        padding: 0% 10%;
         font-size: 0.75rem;
         line-height: 20px;
 
@@ -534,7 +535,7 @@
 
     .footer_text1>div:nth-child(1) {
 
-        width: 60%;
+        width: 50%  !important;
     }
 
     .footer_text1>div:nth-child(2) {

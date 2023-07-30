@@ -1,0 +1,32 @@
+$main-color: rgb(126, 171, 41);
+$main-color2: rgb(0, 72, 66);
+$sub-color: rgb(236, 188, 49);
+
+@mixin center($justify) {
+
+    display: flex;
+    align-items: center;
+    justify-content: $justify;
+    @content;
+}
+
+;
+
+@mixin size($width, $height) {
+    width: $width;
+    height: $height;
+    @content;
+}
+
+;
+
+@mixin postion($p: null, $t: null, $b: null, $l: null, $r: null) {
+    position: $p;
+    top: $t;
+    bottom: $b;
+    left: $l;
+    right: $r;
+    @content;
+}
+
+;
