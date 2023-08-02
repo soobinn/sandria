@@ -19,7 +19,8 @@
 footer,
 .content3_text_btn,
 .content4_box_btn,
-.content2_p {
+.content2_p,
+.text1 > h2 {
   font-family: 'SUITE-Regular';
 
 }
